@@ -1,11 +1,11 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: "AIzaSyAa7rELsPz3KR_stYKtmShlkmn_AWsvAmQ",
-    authDomain: "examenpwm-93504.firebaseapp.com",
-    projectId: "examenpwm-93504",
-    storageBucket: "examenpwm-93504.firebasestorage.app",
-    messagingSenderId: "504956980845",
-    appId: "1:504956980845:web:4da4cb0806b6add6d1f964"
+    apiKey: "AIzaSyCGSpCk5SCvx1A2rwvEP-hLW6oqFvbEP_s",
+    authDomain: "jetsetgo-6a58f.firebaseapp.com",
+    projectId: "jetsetgo-6a58f",
+    storageBucket: "jetsetgo-6a58f.firebasestorage.app",
+    messagingSenderId: "815560438172",
+    appId: "1:815560438172:web:17fd8d2224a84d41b2d859"
   },
 };

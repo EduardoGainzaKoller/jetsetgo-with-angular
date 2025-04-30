@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import { Flight } from '../../models/flight';
 
 @Component({
   selector: 'app-offert',
@@ -7,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './offert.component.css'
 })
 export class OffertComponent {
+
+  @Input() flight: Flight | null = null;
+
+  constructor() {
+  }
 
 }
