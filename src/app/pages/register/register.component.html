@@ -1,0 +1,84 @@
+<app-header></app-header>
+
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+      <div class="card p-4 p-md-5">
+        <div class="card-body">
+          <div class="text-center mb-4">
+            <h2 class="fw-bold mb-2">Bienvenido a <span class="brand-name">JetSetGo</span></h2>
+            <p class="text-muted">Crea tu cuenta para acceder a beneficios exclusivos</p>
+          </div>
+
+          <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+            <div class="mb-4">
+              <label class="form-label fw-medium">Correo electrónico</label>
+              <div class="input-group">
+                  <span class="input-group-text bg-light">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                      <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                    </svg>
+                  </span>
+                <input
+                  type="email"
+                  formControlName="email"
+                  class="form-control"
+                  placeholder="nombre@ejemplo.com"
+                  required
+                >
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label class="form-label fw-medium">Contraseña</label>
+              <div class="input-group">
+                  <span class="input-group-text bg-light">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock" viewBox="0 0 16 16">
+                      <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/>
+                    </svg>
+                  </span>
+                <input
+                  type="password"
+                  formControlName="password"
+                  class="form-control"
+                  placeholder="Mínimo 8 caracteres"
+                  required
+                >
+              </div>
+              <div class="form-text text-end">
+                <small>Usa 8+ caracteres con letras y números</small>
+              </div>
+            </div>
+
+            <button class="btn btn-primary w-100 py-2 mt-3 mb-3" type="submit" [disabled]="registerForm.invalid">
+              <span class="fw-medium">Crear cuenta</span>
+            </button>
+          </form>
+
+          <div class="divider my-4">O continúa con</div>
+
+          <div class="d-flex justify-content-center gap-3">
+            <button class="btn btn-light border social-btn px-4 py-2" (click)="onRegisterWithGoogle()">
+              <img src="assets/google-icon.svg" alt="Google" width="20" height="20" class="me-2">
+              <span class="d-none d-md-inline">Google</span>
+            </button>
+            <button class="btn btn-light border social-btn px-4 py-2" (click)="onRegisterWithGitHub()">
+              <img src="assets/github-icon.svg" alt="GitHub" width="20" height="20" class="me-2">
+              <span class="d-none d-md-inline">GitHub</span>
+            </button>
+          </div>
+
+          <div *ngIf="errorMessage" class="alert alert-danger mt-4 p-3 text-center">
+            {{this.errorMessage}}
+          </div>
+
+          <div class="text-center mt-4">
+            <p class="mb-0 text-muted">¿Ya tienes una cuenta? <a href="#" class="text-decoration-none fw-medium">Iniciar sesión</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
