@@ -1,3 +1,24 @@
+
+.offers-divider {
+  background-color: rgba(245, 247, 250, 0.8);
+  margin-top: 15rem;
+}
+
+.offers-title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #0056b3;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.divider-line {
+  height: 2px;
+  background: linear-gradient(90deg, rgba(240,240,240,1) 0%, rgba(0,86,179,1) 50%, rgba(240,240,240,1) 100%);
+  opacity: 0.8;
+  border: none;
+}
+
 .offerts-container {
   display: flex;
   flex-wrap: wrap;
