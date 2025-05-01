@@ -1,17 +1,23 @@
-<div class="card m-2" style="width: 23rem;">
+<div class="card m-3 shadow-sm border-0 rounded-4 overflow-hidden" style="width: 300px;">
   <img
     [src]="flight?.imagen_destino"
     class="card-img-top"
-    alt="Imagen del destino" />
-  <div class="card-body">
-    <h5 class="card-title">{{ flight?.origen }} → {{ flight?.destino }}</h5>
-    <p class="card-text">
-      Salida: {{ flight?.fecha_de_salida }} a las {{ flight?.hora_de_salida }}<br>
-      Llegada: {{ flight?.fecha_de_llegada }} a las {{ flight?.hora_de_llegada }}<br>
-      Duración: {{ flight?.duracion }}
-    </p>
-    <p class="card-price-text">
-      Desde <span class="price">{{ flight?.precio }} €</span>
-    </p>
+    alt="Imagen del destino"
+    style="height: 180px; object-fit: cover;"
+  />
+  <div class="card-body px-4 py-3 d-flex flex-column justify-content-between" style="height: 230px;">
+    <div>
+      <h5 class="card-title fw-semibold text-primary mb-2">
+        {{ flight?.origen }} → {{ flight?.destino }}
+      </h5>
+      <p class="text-muted mb-3" style="font-size: 0.9rem;">
+        <strong>Salida:</strong> {{ flight?.fecha_de_salida }} a las {{ flight?.hora_de_salida }}<br>
+        <strong>Llegada:</strong> {{ flight?.fecha_de_llegada }} a las {{ flight?.hora_de_llegada }}<br>
+        <strong>Duración:</strong> {{ flight?.duracion }}
+      </p>
+    </div>
+    <div class="mt-auto fw-bold fs-5 text-success">
+      Desde {{ flight?.precio }} €
+    </div>
   </div>
 </div>
