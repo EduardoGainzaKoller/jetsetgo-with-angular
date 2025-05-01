@@ -1,1 +1,27 @@
-<p>search-flight-bar works!</p>
+<form class="container my-4">
+  <div class="row g-2 align-items-end">
+    <div class="col-md">
+      <label for="lugar" class="form-label">Lugar</label>
+      <input type="text" class="form-control" id="lugar" placeholder="¿A dónde vas?">
+    </div>
+    <div class="col-md">
+      <label for="fecha1" class="form-label">Fecha ida</label>
+      <input type="date" class="form-control" id="fecha1" placeholder="DD/MM/YY - DD/MM/YY">
+    </div>
+    <div class="col-md">
+      <label for="fecha2" class="form-label">Fecha vuelta</label>
+      <input type="date" class="form-control" id="fecha2" placeholder="DD/MM/YY - DD/MM/YY">
+    </div>
+    <div class="col-md">
+      <label for="adultos" class="form-label">Adultos</label>
+      <input type="number" class="form-control" id="adultos" min="1" value="1">
+    </div>
+    <div class="col-md">
+      <label for="ninos" class="form-label">Niños</label>
+      <input type="number" class="form-control" id="ninos" min="0" value="0">
+    </div>
+    <div class="col-md-auto">
+      <button type="submit" class="btn btn-primary w-100">Buscar</button>
+    </div>
+  </div>
+</form>
