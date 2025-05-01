@@ -1,0 +1,8 @@
+<app-header></app-header>
+<app-search-hotel-bar></app-search-hotel-bar>
+<app-filter></app-filter>
+<div class="offerts-container">
+  <app-hotel *ngFor="let hotel of hotels" [hotel]="hotel"></app-hotel>
+</div>
+
+<app-footer></app-footer>
