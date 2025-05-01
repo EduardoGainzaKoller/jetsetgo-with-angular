@@ -1,0 +1,8 @@
+<app-header></app-header>
+<app-search-flight-bar></app-search-flight-bar>
+<app-filter></app-filter>
+<div class="offerts-container">
+  <app-flight *ngFor="let flight of flights" [flight]="flight"></app-flight>
+</div>
+
+<app-footer></app-footer>

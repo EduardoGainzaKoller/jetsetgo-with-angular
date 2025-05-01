@@ -3,12 +3,14 @@
     Vuelo
   </div>
   <div class="card-body">
-    <img class="imgVuelo" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/01/db/fb/view-from-the-cruise.jpg?w=1400&h=1400&s=1">
-    <h5 class="card-title">Honduras</h5>
-    <p class="card-text">Hora Salida - Llegada</p>
-    <p class="card-text">Aeropuertos</p>
-    <p class="card-text">Directo/Escala</p>
-    <p class="card-text">Duración</p>
+    <img class="imgVuelo" [src]="flight?.imagen_destino">
+    <h5 class="card-title">{{flight?.destino}}</h5>
+    <p class="card-text">Fecha:</p>
+    <p class="card-text">Salida: {{flight?.fecha_de_salida}} - Llegada: {{flight?.fecha_de_llegada}}</p>
+    <p class="card-text">Hora:</p>
+    <p class="card-text">Salida: {{flight?.hora_de_salida}} - Llegada: {{flight?.hora_de_llegada}}</p>
+    <p class="card-text">Duración: {{flight?.duracion}}</p>
+    <p class="card-text">Precio: {{flight?.precio}}€</p>
     <a href="#" class="btn btn-primary">Más información</a>
   </div>
 </div>

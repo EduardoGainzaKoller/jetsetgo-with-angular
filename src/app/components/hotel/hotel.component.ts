@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {Hotel} from '../../models/hotel';
 
 @Component({
   selector: 'app-hotel',
@@ -7,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './hotel.component.css'
 })
 export class HotelComponent {
+  @Input() hotel: Hotel | null = null;
 
 }

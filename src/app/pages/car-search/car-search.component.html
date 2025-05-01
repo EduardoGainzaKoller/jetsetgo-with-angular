@@ -1,0 +1,8 @@
+<app-header></app-header>
+<app-search-car-bar></app-search-car-bar>
+<app-filter></app-filter>
+<div class="offerts-container">
+  <app-car *ngFor="let car of cars" [car]="car"></app-car>
+</div>
+
+<app-footer></app-footer>
