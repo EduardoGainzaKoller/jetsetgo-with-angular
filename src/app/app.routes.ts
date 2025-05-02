@@ -7,6 +7,7 @@ import {CarSearchComponent} from './pages/car-search/car-search.component';
 import {FlightSearchComponent} from './pages/flight-search/flight-search.component';
 import {RegisterComponent} from './pages/register/register.component';
 import {LoginComponent} from './pages/login/login.component';
+import {AboutUsComponent} from './pages/about-us/about-us.component';
 
 
 export const routes: Routes = [
@@ -18,5 +19,6 @@ export const routes: Routes = [
   {path: 'flight-search', component: FlightSearchComponent },
   {path: 'register', component: RegisterComponent },
   { path:'login', component: LoginComponent },
+  { path: 'aboutUs', component: AboutUsComponent },
   {path: '', component: HomeHotelsComponent }
 ];

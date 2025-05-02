@@ -1,0 +1,15 @@
+<app-header></app-header>
+<app-carousel></app-carousel>
+
+<div class="team-section">
+  <div class="card-container">
+    <div class="github-card" *ngFor="let user of githubUsers">
+      <img [src]="user.avatarUrl" alt="GitHub Avatar" class="avatar">
+      <a [href]="user.profileUrl" target="_blank" rel="noopener noreferrer" class="username">
+        {{ user.username }}
+      </a>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
