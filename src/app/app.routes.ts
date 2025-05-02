@@ -9,6 +9,8 @@ import {RegisterComponent} from './pages/register/register.component';
 import {SupportComponent} from './pages/support/support.component';
 import {FrecuencyQuestionsComponent} from './pages/frecuency-questions/frecuency-questions.component';
 import {InformationComponent} from './pages/information/information.component';
+import {PrivacyComponent} from './pages/privacy/privacy.component';
+import {TermsAndConditionsComponent} from './pages/terms-and-conditions/terms-and-conditions.component';
 
 
 export const routes: Routes = [
@@ -22,5 +24,7 @@ export const routes: Routes = [
   {path: 'support', component: SupportComponent },
   {path: 'frequency-questions', component: FrecuencyQuestionsComponent },
   {path: 'information', component: InformationComponent },
+  {path: 'privacy', component: PrivacyComponent },
+  {path: 'terms-and-conditions', component: TermsAndConditionsComponent },
   {path: '', component: HomeHotelsComponent }
 ];
