@@ -6,6 +6,7 @@ import {HotelSearchComponent} from './pages/hotel-search/hotel-search.component'
 import {CarSearchComponent} from './pages/car-search/car-search.component';
 import {FlightSearchComponent} from './pages/flight-search/flight-search.component';
 import {RegisterComponent} from './pages/register/register.component';
+import {LoginComponent} from './pages/login/login.component';
 
 
 export const routes: Routes = [
@@ -16,5 +17,6 @@ export const routes: Routes = [
   {path: 'car-search', component: CarSearchComponent },
   {path: 'flight-search', component: FlightSearchComponent },
   {path: 'register', component: RegisterComponent },
+  { path:'login', component: LoginComponent },
   {path: '', component: HomeHotelsComponent }
 ];
