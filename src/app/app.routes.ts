@@ -11,6 +11,8 @@ import {FrecuencyQuestionsComponent} from './pages/frecuency-questions/frecuency
 import {InformationComponent} from './pages/information/information.component';
 import {PrivacyComponent} from './pages/privacy/privacy.component';
 import {TermsAndConditionsComponent} from './pages/terms-and-conditions/terms-and-conditions.component';
+import {AboutUsComponent} from './pages/about-us/about-us.component';
+import {LoginComponent} from './pages/login/login.component';
 
 
 export const routes: Routes = [
@@ -21,10 +23,12 @@ export const routes: Routes = [
   {path: 'car-search', component: CarSearchComponent },
   {path: 'flight-search', component: FlightSearchComponent },
   {path: 'register', component: RegisterComponent },
+  { path: 'login', component: LoginComponent },
   {path: 'support', component: SupportComponent },
   {path: 'frequency-questions', component: FrecuencyQuestionsComponent },
   {path: 'information', component: InformationComponent },
   {path: 'privacy', component: PrivacyComponent },
   {path: 'terms-and-conditions', component: TermsAndConditionsComponent },
+  { path: 'aboutUs', component: AboutUsComponent },
   {path: '', component: HomeHotelsComponent }
 ];
