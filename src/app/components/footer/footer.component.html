@@ -3,18 +3,18 @@
     <div class="footer-column center-column">
       <h3>Información</h3>
       <ul>
-        <li><a [routerLink]="['/aboutUs']">Sobre nosotros</a></li>
-        <li><a>Contacto</a></li>
-        <li><a>Política de privacidad</a></li>
+        <li><a>Sobre nosotros</a></li>
+        <li [routerLink]="'/information'"><a>Acerca de</a></li>
+        <li [routerLink]="'/privacy'"><a>Política de privacidad</a></li>
       </ul>
     </div>
 
     <div class="footer-column center-column">
       <h3>Ayuda</h3>
       <ul>
-        <li><a>Preguntas frecuentes</a></li>
-        <li><a>Términos y condiciones</a></li>
-        <li><a>Soporte</a></li>
+        <li [routerLink]="'/frequency-questions'"><a>Preguntas frecuentes</a></li>
+        <li [routerLink]="'/terms-and-conditions'"><a>Términos y condiciones</a></li>
+        <li [routerLink]="'/support'"><a>Soporte</a></li>
       </ul>
     </div>
   </div>
