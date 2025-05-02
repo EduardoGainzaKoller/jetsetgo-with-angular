@@ -1,14 +1,20 @@
-<div class="card">
-  <div class="card-header">
-    Hotel
-  </div>
-  <div class="card-body">
-    <img class="imgHotel" [src]="hotel?.imagen_hotel">
-    <h5 class="card-title">{{hotel?.nombre}}</h5>
-    <p class="card-text">Precio por día: {{hotel?.precio}}€</p>
-    <p class="card-text">Estrellas: {{hotel?.estrellas}}</p>
-    <p class="card-text">Valoración: {{hotel?.valoracion}}</p>
-    <p class="card-text">Ubicado en: {{hotel?.localizacion}}</p>
-    <a href="#" class="btn btn-primary">Más información</a>
+<div class="container my-4">
+  <div class="d-flex justify-content-between align-items-center p-3 bg-light rounded">
+    <div class="d-flex align-items-start">
+      <img class="imgHotel" [src]="hotel?.imagen_hotel">
+      <div>
+        <h5 class="card-title">{{hotel?.nombre}}</h5>
+        <p class="mb-0">Descripcion</p>
+      </div>
+    </div>
+    <div class="text-end">
+      <p class="card-text">Estrellas: {{hotel?.estrellas}}</p>
+      <p class="card-text">Valoración: {{hotel?.valoracion}}</p>
+      <p class="card-text">Precio por día: {{hotel?.precio}}€</p>
+      <p class="card-text">Ubicado en: {{hotel?.localizacion}}</p>
+      <button class="btn btn-primary">Seleccionar</button>
+    </div>
   </div>
 </div>
+
+
