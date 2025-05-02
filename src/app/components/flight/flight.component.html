@@ -1,16 +1,51 @@
-<div class="card">
-  <div class="card-header">
-    Vuelo
-  </div>
-  <div class="card-body">
-    <img class="imgVuelo" [src]="flight?.imagen_destino">
-    <h5 class="card-title">{{flight?.destino}}</h5>
-    <p class="card-text">Fecha:</p>
-    <p class="card-text">Salida: {{flight?.fecha_de_salida}} - Llegada: {{flight?.fecha_de_llegada}}</p>
-    <p class="card-text">Hora:</p>
-    <p class="card-text">Salida: {{flight?.hora_de_salida}} - Llegada: {{flight?.hora_de_llegada}}</p>
-    <p class="card-text">Duración: {{flight?.duracion}}</p>
-    <p class="card-text">Precio: {{flight?.precio}}€</p>
-    <a href="#" class="btn btn-primary">Más información</a>
+<div class="container-fluid py-4">
+  <div class="row justify-content-center">
+    <div class="col-12">
+      <!-- tarjeta tumbada a 12rem de alto -->
+      <div
+        class="card d-flex flex-row w-100 mx-auto mb-4 overflow-hidden"
+        style="max-width: 1200px; height: 12rem;"
+      >
+        <!-- imagen fija (175×175px) -->
+        <img
+          [src]="flight?.imagen_destino"
+          class="imgVuelo m-3"
+          alt="Destino vuelo"
+        />
+
+        <!-- cuerpo distribuido con flex -->
+        <div class="card-body d-flex flex-column justify-content-between py-2">
+
+          <!-- bloque superior con datos -->
+          <div>
+            <h5 class="card-title mb-1">{{ flight?.destino }}</h5>
+
+            <p class="card-text mb-1">
+              <small><strong>Fecha:</strong>
+                {{ flight?.fecha_de_salida }} – {{ flight?.fecha_de_llegada }}</small>
+            </p>
+
+            <p class="card-text mb-1">
+              <small><strong>Hora:</strong>
+                {{ flight?.hora_de_salida }} – {{ flight?.hora_de_llegada }}</small>
+            </p>
+
+            <p class="card-text mb-1">
+              <small><strong>Duración:</strong>
+                {{ flight?.duracion }}</small>
+            </p>
+          </div>
+
+          <!-- bloque inferior con precio + botón -->
+          <div>
+            <p class="card-text mb-1">
+              <small><strong>Precio:</strong> {{ flight?.precio }}€</small>
+            </p>
+            <a href="#" class="btn btn-primary btn-sm w-100">Más información</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
   </div>
 </div>

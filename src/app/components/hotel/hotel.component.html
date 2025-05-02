@@ -1,14 +1,46 @@
-<div class="card">
-  <div class="card-header">
-    Hotel
-  </div>
-  <div class="card-body">
-    <img class="imgHotel" [src]="hotel?.imagen_hotel">
-    <h5 class="card-title">{{hotel?.nombre}}</h5>
-    <p class="card-text">Precio por día: {{hotel?.precio}}€</p>
-    <p class="card-text">Estrellas: {{hotel?.estrellas}}</p>
-    <p class="card-text">Valoración: {{hotel?.valoracion}}</p>
-    <p class="card-text">Ubicado en: {{hotel?.localizacion}}</p>
-    <a href="#" class="btn btn-primary">Más información</a>
+<!-- Marcado HTML -->
+<div class="container-fluid py-4">
+  <div class="row justify-content-center">
+    <div class="col-12">
+      <!-- tarjeta tumbada a 12rem de alto y max-width de 1200px -->
+      <div
+        class="card d-flex flex-row w-100 mx-auto mb-4 overflow-hidden"
+        style="max-width: 1200px; height: 12rem;"
+      >
+        <!-- imagen fija (175×175px) -->
+        <img
+          [src]="hotel?.imagen_hotel"
+          class="imgHotel m-3"
+          alt="Imagen del hotel"
+        />
+
+        <!-- cuerpo distribuido con flex -->
+        <div class="card-body d-flex flex-column justify-content-between py-2">
+
+          <!-- bloque superior con el nombre -->
+          <div>
+            <h5 class="card-title mb-1">{{ hotel?.nombre }}</h5>
+          </div>
+
+          <!-- bloque inferior con los datos y botón -->
+          <div>
+            <p class="card-text mb-1">
+              <small><strong>Precio por día:</strong> {{ hotel?.precio }}€</small>
+            </p>
+            <p class="card-text mb-1">
+              <small><strong>Estrellas:</strong> {{ hotel?.estrellas }}</small>
+            </p>
+            <p class="card-text mb-1">
+              <small><strong>Valoración:</strong> {{ hotel?.valoracion }}</small>
+            </p>
+            <p class="card-text mb-1">
+              <small><strong>Ubicado en:</strong> {{ hotel?.localizacion }}</small>
+            </p>
+            <a href="#" class="btn btn-primary btn-sm w-100">Más información</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
   </div>
 </div>
