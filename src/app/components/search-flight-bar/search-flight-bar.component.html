@@ -1,27 +1,46 @@
-<form class="container my-4">
+<form class="container my-4" (ngSubmit)="searchFlight()">
   <div class="row g-2 align-items-end">
     <div class="col-md">
       <label for="lugar" class="form-label">Lugar</label>
-      <input type="text" class="form-control" id="lugar" placeholder="¿A dónde vas?">
+      <input
+        type="text"
+        class="form-control"
+        id="lugar"
+        name="destino"
+        [(ngModel)]="busqueda.destino"
+        placeholder="¿A dónde vas?"
+      />
     </div>
     <div class="col-md">
       <label for="fecha1" class="form-label">Fecha ida</label>
-      <input type="date" class="form-control" id="fecha1" placeholder="DD/MM/YY - DD/MM/YY">
+      <input
+        type="date"
+        class="form-control"
+        id="fecha1"
+        name="fecha_de_salida"
+        [(ngModel)]="busqueda.fecha_de_salida"
+      />
     </div>
     <div class="col-md">
       <label for="fecha2" class="form-label">Fecha vuelta</label>
-      <input type="date" class="form-control" id="fecha2" placeholder="DD/MM/YY - DD/MM/YY">
+      <input
+        type="date"
+        class="form-control"
+        id="fecha2"
+        name="fecha_de_llegada"
+        [(ngModel)]="busqueda.fecha_de_llegada"
+      />
     </div>
     <div class="col-md">
       <label for="adultos" class="form-label">Adultos</label>
-      <input type="number" class="form-control" id="adultos" min="1" value="1">
+      <input type="number" class="form-control" id="adultos" min="1" value="1" />
     </div>
     <div class="col-md">
       <label for="ninos" class="form-label">Niños</label>
-      <input type="number" class="form-control" id="ninos" min="0" value="0">
+      <input type="number" class="form-control" id="ninos" min="0" value="0" />
     </div>
     <div class="col-md-auto">
-      <button type="submit" class="btn btn-primary w-100" [routerLink]="['/flight-search']">Buscar</button>
+      <button type="submit" class="btn btn-primary w-100">Buscar</button>
     </div>
   </div>
 </form>

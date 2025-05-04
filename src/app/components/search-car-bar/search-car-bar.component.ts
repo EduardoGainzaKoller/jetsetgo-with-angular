@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import {RouterLink} from '@angular/router';
+import {Component, inject} from '@angular/core';
+import {Router, RouterLink} from '@angular/router';
+import {Flight} from '../../models/flight';
+import {FlightsService} from '../../services/flights.service';
 
 @Component({
   selector: 'app-search-car-bar',

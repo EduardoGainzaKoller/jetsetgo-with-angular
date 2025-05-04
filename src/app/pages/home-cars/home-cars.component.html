@@ -18,5 +18,6 @@
 </div>
 
 <div class="offerts-container">
-  <app-offert *ngFor="let flight of flights" [flight]="flight"></app-offert>
+  <app-offert *ngFor="let flight of flights | slice:0:5" [flight]="flight"></app-offert>
 </div>
+

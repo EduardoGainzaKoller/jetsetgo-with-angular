@@ -6,7 +6,7 @@ import {OffertComponent} from '../../components/offert/offert.component';
 import {FooterComponent} from '../../components/footer/footer.component';
 import {Flight} from '../../models/flight';
 import {FlightsService} from '../../services/flights.service';
-import {NgForOf} from '@angular/common';
+import {NgForOf, SlicePipe} from '@angular/common';
 import {HeaderSessionStartComponent} from '../../components/header-session-start/header-session-start.component';
 
 @Component({
@@ -18,7 +18,8 @@ import {HeaderSessionStartComponent} from '../../components/header-session-start
     OffertComponent,
     FooterComponent,
     NgForOf,
-    HeaderSessionStartComponent
+    HeaderSessionStartComponent,
+    SlicePipe
   ],
   templateUrl: './home-hotels.component.html',
   styleUrl: './home-hotels.component.css'

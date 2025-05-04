@@ -1,5 +1,18 @@
 <app-search-flight-bar></app-search-flight-bar>
 <app-filter></app-filter>
+
 <div class="offerts-container">
-  <app-flight *ngFor="let flight of flights" [flight]="flight"></app-flight>
+  <ng-container *ngIf="vuelosFiltrados.length > 0; else noResults">
+    <app-flight *ngFor="let flight of vuelosFiltrados" [flight]="flight"></app-flight>
+  </ng-container>
+
+  <ng-template #noResults>
+    <div *ngIf="vuelos.length > 0 && vuelosFiltrados.length === 0">
+      <p>No se encontraron resultados con los filtros aplicados.</p>
+    </div>
+
+    <div *ngIf="vuelosFiltrados.length === 0">
+      <app-flight *ngFor="let flight of vuelos" [flight]="flight"></app-flight>
+    </div>
+  </ng-template>
 </div>

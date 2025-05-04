@@ -1,12 +1,10 @@
 <form class="container my-4">
   <div class="row g-2 align-items-end">
-    <!-- Lugar -->
     <div class="col-md">
       <label for="lugar" class="form-label">Lugar</label>
       <input type="text" class="form-control" id="lugar" placeholder="¿A dónde vas?">
     </div>
 
-    <!-- Fecha -->
     <div class="col-md">
       <label for="fecha1" class="form-label">Fecha recogida</label>
       <input type="date" class="form-control" id="fecha1" placeholder="DD/MM/YY">
@@ -16,7 +14,6 @@
       <input type="date" class="form-control" id="fecha2" placeholder="DD/MM/YY">
     </div>
 
-    <!-- Hora de recogida -->
     <div class="col-md">
       <label for="hora-recogida" class="form-label">Hora de recogida</label>
       <select class="form-select" id="hora-recogida">
@@ -41,7 +38,6 @@
       </select>
     </div>
 
-    <!-- Hora de devolución -->
     <div class="col-md">
       <label for="hora-devolucion" class="form-label">Hora de devolución</label>
       <select class="form-select" id="hora-devolucion">
@@ -66,7 +62,6 @@
       </select>
     </div>
 
-    <!-- Botón de búsqueda -->
     <div class="col-md-auto">
       <button type="submit" class="btn btn-primary w-100" [routerLink]="['/car-search']">Buscar</button>
     </div>
