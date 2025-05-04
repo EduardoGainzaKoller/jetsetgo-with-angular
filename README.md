@@ -71,6 +71,7 @@ jetsetgo-with-angular/
 ├── tsconfig.json
 ├── tsconfig.app.json
 └── tsconfig.spec.json
+```
 Este proyecto web desarrollado con Angular representa una plataforma de reservas de viajes. A continuación, se explica la estructura de carpetas y los componentes creados, junto con su funcionalidad.
 
 ---
