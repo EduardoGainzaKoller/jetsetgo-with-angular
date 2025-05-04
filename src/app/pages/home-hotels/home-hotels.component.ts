@@ -7,6 +7,7 @@ import {FooterComponent} from '../../components/footer/footer.component';
 import {Flight} from '../../models/flight';
 import {FlightsService} from '../../services/flights.service';
 import {NgForOf} from '@angular/common';
+import {HeaderSessionStartComponent} from '../../components/header-session-start/header-session-start.component';
 
 @Component({
   selector: 'app-home-hotels',
@@ -16,7 +17,8 @@ import {NgForOf} from '@angular/common';
     SearchHotelBarComponent,
     OffertComponent,
     FooterComponent,
-    NgForOf
+    NgForOf,
+    HeaderSessionStartComponent
   ],
   templateUrl: './home-hotels.component.html',
   styleUrl: './home-hotels.component.css'
