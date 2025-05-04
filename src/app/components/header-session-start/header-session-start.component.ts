@@ -1,6 +1,7 @@
 import {Component, inject} from '@angular/core';
 import {Router, RouterLink} from '@angular/router';
 import {UserService} from '../../services/user.service';
+import {User} from '@angular/fire/auth';
 
 @Component({
   selector: 'app-header-session-start',
@@ -13,8 +14,14 @@ import {UserService} from '../../services/user.service';
 export class HeaderSessionStartComponent {
 
   userService: UserService = inject(UserService);
+  user: User | null = null;
 
   constructor(private router: Router) {
+  }
+
+
+  ngOnInit() {
+    this.user = this.userService.getCurrentUser()
   }
 
   cerrarSesion() {
