@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {Router, RouterLink} from '@angular/router';
+import {UserService} from '../../services/user.service';
 
 @Component({
   selector: 'app-header-session-start',
@@ -10,15 +11,17 @@ import {Router, RouterLink} from '@angular/router';
   styleUrl: './header-session-start.component.css'
 })
 export class HeaderSessionStartComponent {
-  // Asegúrate de que tienes acceso al servicio de autenticación si usas uno
+
+  userService: UserService = inject(UserService);
+
   constructor(private router: Router) {
   }
 
   cerrarSesion() {
-    // Lógica para cerrar sesión aquí, por ejemplo:
-    // this.authService.logout(); // Si tienes un servicio de autenticación
+    this.userService.logout().then(() => {
+      console.log('Sesión cerrada');
+      this.router.navigate(['/login']);
+    });
 
-    // Redirigir al login después de cerrar sesión
-    this.router.navigate(['/login']);
   }
 }

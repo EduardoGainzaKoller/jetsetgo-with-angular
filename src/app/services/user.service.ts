@@ -6,8 +6,13 @@ import {
   GoogleAuthProvider,
   GithubAuthProvider,
   signInWithEmailAndPassword,
-  UserCredential, fetchSignInMethodsForEmail
+  UserCredential,
+  fetchSignInMethodsForEmail,
+  onAuthStateChanged,
+  signOut,
+  User
 } from '@angular/fire/auth';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -15,8 +20,13 @@ import {
 export class UserService {
 
   auth: Auth = inject(Auth);
+  private currentUserSubject = new BehaviorSubject<User | null>(null);
 
-  constructor() { }
+  constructor() {
+    onAuthStateChanged(this.auth, (user) => {
+      this.currentUserSubject.next(user);
+    });
+  }
 
   async register(email: string, password: string): Promise<UserCredential> {
     return await createUserWithEmailAndPassword(this.auth, email, password);
@@ -39,5 +49,17 @@ export class UserService {
   async checkIfEmailExists(email: string): Promise<boolean> {
     const methods = await fetchSignInMethodsForEmail(this.auth, email);
     return methods.length > 0;
+  }
+
+  isLoggedIn(): Observable<User | null> {
+    return this.currentUserSubject.asObservable();
+  }
+
+  getCurrentUser(): User | null {
+    return this.currentUserSubject.value;
+  }
+
+  async logout(): Promise<void> {
+    await signOut(this.auth);
   }
 }

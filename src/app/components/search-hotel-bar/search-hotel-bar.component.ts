@@ -8,7 +8,6 @@ import {FormsModule} from '@angular/forms';
   selector: 'app-search-hotel-bar',
   standalone: true,
   imports: [
-    RouterLink,
     FormsModule
   ],
   templateUrl: './search-hotel-bar.component.html',
