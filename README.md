@@ -9,6 +9,7 @@ JetSetGo es un proyecto pensado para facilitar las vacaciones a nuestros cliente
 
 # 📁 Estructura del Código - Proyecto JetSetGo (Angular)
 
+```plaintext
 jetsetgo-with-angular/
 ├── public/
 │   └── assets/
@@ -58,7 +59,7 @@ jetsetgo-with-angular/
 │   │   ├── app.config.ts
 │   │   └── app.routes.ts
 │   ├── environments/
-│   │   ├── environments.ts
+│   │   └── environments.ts
 │   ├── index.html
 │   ├── main.ts
 │   └── styles.css
@@ -70,7 +71,6 @@ jetsetgo-with-angular/
 ├── tsconfig.json
 ├── tsconfig.app.json
 └── tsconfig.spec.json
-
 Este proyecto web desarrollado con Angular representa una plataforma de reservas de viajes. A continuación, se explica la estructura de carpetas y los componentes creados, junto con su funcionalidad.
 
 ---
@@ -268,4 +268,4 @@ Por otra parte querría destacar que además de cargar los datos del firestore y
 En el pptx se implementa el ejemplo de introducción de datos así como su posterior visualización en el catálogo que corresponda.
 
 # Enlace a Trello
-[Trello][(https://trello.com/b/vSQwAi7S)]
+[Trello][https://trello.com/b/vSQwAi7S/pwm-sprint-3]
