@@ -269,4 +269,4 @@ Por otra parte querría destacar que además de cargar los datos del firestore y
 En el pptx se implementa el ejemplo de introducción de datos así como su posterior visualización en el catálogo que corresponda.
 
 # Enlace a Trello
-[Trello][https://trello.com/b/vSQwAi7S/pwm-sprint-3]
+[Trello][(https://trello.com/b/vSQwAi7S/pwm-sprint-3)]
