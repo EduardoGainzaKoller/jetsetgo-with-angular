@@ -6,4 +6,6 @@ export interface Hotel {
   estrellas: number;
   localizacion: string;
   imagen_hotel: string;
+  inicio_disponibilidad: string;
+  fin_disponibilidad: string;
 }

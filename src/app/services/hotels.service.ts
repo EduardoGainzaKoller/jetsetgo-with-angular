@@ -13,7 +13,6 @@ export class HotelsService {
 
   constructor() { }
 
-
   getAllHotels(): Observable<Hotel[]> {
     const hotelsRef = collection(this.firestore, 'hotels');
     return collectionData(hotelsRef, {idField: 'id'}) as Observable<Hotel[]>;

@@ -1,8 +1,21 @@
 <app-header></app-header>
 <app-search-hotel-bar></app-search-hotel-bar>
 <app-filter></app-filter>
+
 <div class="offerts-container">
-  <app-hotel *ngFor="let hotel of hotels" [hotel]="hotel"></app-hotel>
+  <ng-container *ngIf="filteredHotels.length > 0; else noResults">
+    <app-hotel *ngFor="let hotel of filteredHotels" [hotel]="hotel"></app-hotel>
+  </ng-container>
+
+  <ng-template #noResults>
+    <div *ngIf="hotels.length > 0 && filteredHotels.length === 0">
+      <p>No se encontraron resultados con los filtros aplicados.</p>
+    </div>
+
+    <div *ngIf="filteredHotels.length === 0">
+      <app-hotel *ngFor="let hotel of hotels" [hotel]="hotel"></app-hotel>
+    </div>
+  </ng-template>
 </div>
 
 <app-footer></app-footer>
